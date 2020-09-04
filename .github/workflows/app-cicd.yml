@@ -28,7 +28,7 @@ jobs:
         ls
         find ./ -name *UT.csproj -execdir dotnet add package coverlet.msbuild \;
         find ./ -name *UT.csproj -execdir dotnet add package FluentAssertions \;
-    - name: Test
+    - name: Test1
       if: ${{ success() }}
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx --no-restore --verbosity normal
     
